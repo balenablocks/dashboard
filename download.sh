@@ -7,6 +7,8 @@ case $1 in
        ;;
    aarch64) package_file="grafana_${version}_arm64.deb"
        ;;
+   amd64) package_file="grafana_${version}_amd64.deb"
+       ;;
    *) package_file="grafana_${version}_armhf.deb"
 esac
 curl -s "${download_base}${package_file}" -o "${outfile}"
